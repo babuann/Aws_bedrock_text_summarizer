@@ -6,40 +6,7 @@ import requests
 api_endpoint="function_url from aws_lambda"
 def get_response(text):
     payload={
-        "prompt":f"""generate an accurate summary in the following format:
-
-Projects:
-
-[List of projects]
-
-
-Morning:
-
-[Activities during the morning]
-
-
-Mid-Morning:
-
-[Activities during the mid-morning]
-
-
-Noon:
-
-[Activities during noon]
-
-
-Afternoon:
-
-[Activities during the afternoon]
-
-
-Main Topics Discussed:
-
-[List of main topics discussed]
-
-
-
-The summary should include the people you interacted with, the topics discussed, and the associated projects. Keep the summary concise, using less than 200 words. The purpose is to help the team leader, client, or boss quickly understand what you have been working on during the captured period\n {text}"""
+        "prompt":f"""Summaraize the information added .donot add any extra information {text}"""
     }
     response=requests.post(api_endpoint,json=payload)
     print(f"response status::{response.status_code}")
