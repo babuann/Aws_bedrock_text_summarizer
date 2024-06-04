@@ -3,7 +3,7 @@ import json
 import time
 import requests
 
-api_endpoint="https://bbaxg3rkpbx24vcsqozlg6nho40srvyh.lambda-url.us-east-1.on.aws/"
+api_endpoint="function_url from aws_lambda"
 def get_response(text):
     payload={
         "prompt":f"""generate an accurate summary in the following format:
